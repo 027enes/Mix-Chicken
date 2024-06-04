@@ -476,7 +476,7 @@
 }
 .product-line{
     position: absolute;
-    top: -59px;
+    top: -55px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -640,7 +640,7 @@
 }
 .news-line{
     position: absolute;
-    top: -59px;
+    top: -55px;
     left: 50%;
     transform: translateX(-50%);
 }
