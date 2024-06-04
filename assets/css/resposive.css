@@ -64,6 +64,10 @@
     .footer-social ul{
         grid-template-columns: repeat(3,1fr);
     }
+    .swiper-slide-img{
+        height: 400px;
+        z-index: 99;
+    }
 }
 @media (max-width: 768px){
     .footer-contact::before{
@@ -94,10 +98,7 @@
     .swiper-slide-row{
         flex-direction: column;
     }
-    .swiper-slide-img{
-        height: 400px;
-        z-index: 99;
-    }
+
     .swiper-slide-img img{
         height: 100% !important;
     }
@@ -158,7 +159,7 @@
         text-align: center;
     }
     .swiper-slide-img{
-        height: auto;
+        min-height: 400px;
     }
     .category-image{
         height: 200px;
