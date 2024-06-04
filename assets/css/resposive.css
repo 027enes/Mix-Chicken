@@ -164,4 +164,9 @@
     .category-image{
         height: 200px;
     }
+    .contact-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
