@@ -154,4 +154,13 @@
         padding: 20px 0;
         align-items: start;
     }
+    .swiper-slide-content{
+        text-align: center;
+    }
+    .swiper-slide-img{
+        height: auto;
+    }
+    .category-image{
+        height: 200px;
+    }
 }
