@@ -406,6 +406,9 @@
 .about-content .about-us-list{
     display: flex;
     gap: 10px;
+    background-color: #f4f2ed;
+    padding: 20px;
+    border-radius: 10px;
 }
 .about-us-list-icon{
     width:50px;
@@ -419,9 +422,14 @@
 .about-us-list .about-us-text{
     width:270px
 }
+
 /*about-us*/
 
 /*product*/
+.products-animation{
+    position: relative;
+    z-index: 999;
+}
 .product{
     background-color: #f4f2ed;
     padding: 70px 0 250px 0;
@@ -604,7 +612,7 @@
     position: relative;
 }
 .promo-deal-content h2{
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 700;
     color:#ffffff;
 }
@@ -628,8 +636,34 @@
 .promo-deal-btn:hover{
     background-color: var(--restaurant-hover);
 }
-.mix-chicken-title{
-    color: #ffc107;
+.mix-chicken-title {
+    color: #ffc107 !important;
+}
+
+.mix-chicken-char {
+    color: #ffc107 !important;
+}
+.promo-deal-animation {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.promo-deal-animation .char,
+.promo-deal-animation .mix-chicken-char {
+    display: inline-block;
+    margin-right: 5px; /* Karakterler arasında boşluk */
+}
+
+.mix-chicken-title {
+    display: inline;
+}
+
+.mix-chicken-char {
+    color: #ffc107 !important;
+}
+.product-index{
+    position: relative;
+    z-index: 999;
 }
 /* promo-deal */
 /*news*/

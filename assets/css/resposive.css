@@ -169,4 +169,20 @@
         align-items: center;
         justify-content: center;
     }
+    .about-content{
+        grid-template-columns: repeat(1,1fr);
+        z-index: 99;
+        position: relative;
+    }
+    .about-us-image{
+        height: 350px;
+    }
+    .about-us-image img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .about-us-content{
+        padding: 20px 0;
+    }
 }
