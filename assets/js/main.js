@@ -1,3 +1,30 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if the screen size is mobile
+    function isMobile() {
+        return window.innerWidth <= 768; // Adjust this value based on your design's breakpoint for mobile
+    }
+
+    // Add event listener to the dropdown list
+    const dropdownList = document.querySelector('.dropdown-list');
+    const dropdownMenu = dropdownList.querySelector('.dropdown');
+
+    dropdownList.addEventListener('click', function(e) {
+        if (isMobile()) {
+            e.preventDefault(); // Prevent the default anchor click behavior
+            dropdownMenu.classList.toggle('active');
+        }
+    });
+
+    // Re-check on window resize
+    window.addEventListener('resize', function() {
+        if (!isMobile()) {
+            dropdownMenu.classList.remove('active'); // Ensure the dropdown is hidden on larger screens
+        }
+    });
+});
+
+
+
 const hamburgerBtn = document.getElementById('hamburgerBtn');
 const navigation = document.getElementById('navigation');
 hamburgerBtn.addEventListener('click', () => {
@@ -196,3 +223,6 @@ var swiper = new Swiper(".newsSlider", {
         },
     },
 });
+
+
+

@@ -678,6 +678,11 @@ header:after{
 .footer-contact-info{
     margin: 20px 0;
 }
+.footer-contact-info p{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 .footer-social h3{
     font-size: 24px;
     font-weight: 700;
@@ -983,11 +988,6 @@ header:after{
     padding: 100px 0;
     position: relative;
 }
-.news-grid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
 .news-items{
     transition: all 0.3s ease-in-out;
     position: relative;
@@ -1207,6 +1207,10 @@ header:after{
     align-items: center;
     justify-content: center;
     padding-block: 0.5rem;
+}
+.franchise-form .button{
+    padding-block: 0.5rem;
+    padding-inline: 2.25rem;
 }
 /*subeler-items*/
 .subeler{
