@@ -22,29 +22,31 @@
     .mobil.active{
         display:block;
     }
-    body{
-        overflow-x: hidden;
-    }
     .hamburger{
         display:block;
     }
-    .navigation{
-        display: unset;
+    .navigation {
+        display: block; /* Change display to block */
+        visibility: hidden; /* Start with visibility hidden */
+        opacity: 0; /* Start with opacity 0 */
         justify-content: center;
         align-items: start;
         padding: 20px 0;
         position: absolute;
         top: 118px;
-        right: -100%;
+        right: 0; /* Start with right 0 */
         width: 80%;
         height: calc(100vh - 120px);
         background-color: #fff;
         z-index: 999999;
-        transition: all 0.3s ease-in-out;
+        transition: visibility 0.3s, opacity 0.3s ease-in-out; /* Add transition for visibility and opacity */
     }
-    .navigation.active{
-        right: 0;
+
+    .navigation.active {
+        visibility: visible; /* Make it visible when active */
+        opacity: 1; /* Make it fully opaque when active */
     }
+
     .navigation .navigation-lists{
         display: flex;
         gap: 0;

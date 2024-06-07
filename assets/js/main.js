@@ -1,17 +1,45 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navigation = document.getElementById('navigation');
+    hamburgerBtn.addEventListener('click', () => {
+        navigation.classList.toggle('active');
+    });
+
+    const searchBtn = document.getElementById('searchBtn');
+    const searchContent = document.getElementById('search-content');
+    const closeBtn = document.getElementById('closeBtn');
+    searchBtn.addEventListener('click', () => {
+        if (searchContent.classList.contains('active')) {
+            searchContent.classList.remove('active');
+        } else {
+            searchContent.classList.add('active');
+        }
+    });
+    closeBtn.addEventListener('click', () => {
+        searchContent.classList.remove('active');
+    });
+});
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Check if the screen size is mobile
     function isMobile() {
-        return window.innerWidth <= 768; // Adjust this value based on your design's breakpoint for mobile
+        return window.innerWidth <= 768;
     }
 
-    // Add event listener to the dropdown list
     const dropdownList = document.querySelector('.dropdown-list');
     const dropdownMenu = dropdownList.querySelector('.dropdown');
+    const navigationLink = dropdownList.querySelector('.navigation-list-text');
 
     dropdownList.addEventListener('click', function(e) {
         if (isMobile()) {
             e.preventDefault(); // Prevent the default anchor click behavior
             dropdownMenu.classList.toggle('active');
+        }
+    });
+
+    // Allow the link to be clicked if it's not on mobile
+    dropdownMenu.addEventListener('click', function(e) {
+        if (isMobile()) {
+            e.stopPropagation();
         }
     });
 
@@ -25,25 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-const hamburgerBtn = document.getElementById('hamburgerBtn');
-const navigation = document.getElementById('navigation');
-hamburgerBtn.addEventListener('click', () => {
-    navigation.classList.toggle('active');
-});
 
-const searchBtn = document.getElementById('searchBtn');
-const searchContent = document.getElementById('search-content');
-const closeBtn = document.getElementById('closeBtn');
-searchBtn.addEventListener('click', () => {
-    if (searchContent.classList.contains('active')) {
-        searchContent.classList.remove('active');
-    } else {
-        searchContent.classList.add('active');
-    }
-});
-closeBtn.addEventListener('click', () => {
-    searchContent.classList.remove('active');
-});
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -105,73 +115,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-var swiper = new Swiper(".homeCategory", {
-    slidesPerView: 2,
-    spaceBetween: 1,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    breakpoints: {
-        640: {
-            slidesPerView: 2,
-        },
-        768: {
-            slidesPerView: 4,
-        },
-        1223: {
-            slidesPerView: 4,
-        },
-        1224: {
-            slidesPerView: 5,
-        },
-    },
-});
-var productTabsSwiper = new Swiper('.productTabs', {
-    slidesPerView: 2,
-    spaceBetween: 10,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    breakpoints: {
-        640: {
-            slidesPerView: 2,
-            spaceBetween: 10,
-        },
-        768: {
-            slidesPerView: 3,
-            spaceBetween: 10,
-        },
-        1024: {
-            slidesPerView: 4,
-            spaceBetween: 10,
-        },
-    },
-});
 
-var productSwiper = new Swiper('.productCategory', {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    breakpoints: {
-        640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        768: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-        },
-        1024: {
-            slidesPerView: 4,
-            spaceBetween: 30,
-        },
-    },
-});
+
+
 
 // Tab menüdeki linklere tıklama olayları
 document.querySelectorAll('.productTabs .swiper-slide a').forEach(function(tab) {
@@ -201,28 +147,6 @@ function filterSlides(category) {
     productSwiper.update();
 }
 
-var swiper = new Swiper(".newsSlider", {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-        640: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-        },
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        1024: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-        },
-    },
-});
 
 
 

@@ -447,121 +447,18 @@
     </div>
 </footer>
 
+
+<script src="assets/js/swiper.js"></script>
 <script src="assets/js/gsap.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+<script src="assets/js/main.js"></script>
 
 
 <script>
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const navigation = document.getElementById('navigation');
-    hamburgerBtn.addEventListener('click', () => {
-        navigation.classList.toggle('active');
-    });
 
-    var swiper = new Swiper(".newsSlider", {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        breakpoints: {
-            640: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-            },
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-            },
-            1024: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-            },
-        },
-    });
-
-    var swiper = new Swiper(".subeler", {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        breakpoints: {
-            640: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-            },
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-            },
-            1024: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-            },
-        },
-    });
-    var swiper = new Swiper('.homeSlider', {
-        loop: true,
-        effect: "fade",
-
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        on: {
-            init: function () {
-                var activeSlide = document.querySelector('.swiper-slide-active');
-                gsap.set(activeSlide.querySelectorAll('.swiper-title, .swiper-description, .swiper-button'), {
-                    opacity: 0,
-                    y: 20
-                });
-                gsap.to(activeSlide.querySelectorAll('.swiper-title, .swiper-description, .swiper-button'), {
-                    opacity: 1,
-                    y: 0,
-                    duration: 0.5,
-                    stagger: 0.3,
-                    delay: 0.3
-                });
-            },
-            slideChangeTransitionStart: function () {
-                var previousSlide = document.querySelector('.swiper-slide-active');
-                if (previousSlide) {
-                    gsap.to(previousSlide.querySelectorAll('.swiper-title, .swiper-description, .swiper-button'), {
-                        opacity: 0,
-                        y: 20,
-                        duration: 0.5,
-                        stagger: 0.1
-                    });
-                }
-            },
-            slideChangeTransitionEnd: function () {
-                var activeSlide = document.querySelector('.swiper-slide-active');
-                if (activeSlide) {
-                    gsap.fromTo(activeSlide.querySelectorAll('.swiper-title, .swiper-description, .swiper-button'), {
-                        opacity: 0,
-                        y: 20
-                    }, {
-                        opacity: 1,
-                        y: 0,
-                        duration: 0.5,
-                        stagger: 0.3,
-                        delay: 0.3
-                    });
-                }
-            }
-        }
-    });
-
-    // Initialize the swiper to trigger the init event
-    swiper.init();
 
 
 </script>
