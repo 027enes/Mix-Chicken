@@ -161,6 +161,22 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".contact-form", {
+        duration: 1.5,
+        y: 100,
+        opacity: 0,
+        ease: "power4.out",
+        scrollTrigger: {
+            trigger: ".contact-form",
+            start: "top 80%",
+            end: "bottom 60%",
+            toggleActions: "play none none none",
+        }
+    });
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     gsap.registerPlugin(ScrollTrigger);
@@ -345,5 +361,72 @@ document.addEventListener("DOMContentLoaded", function() {
             toggleActions: "play none none none",
         },
         stagger: 0.2 // Her öğe arası animasyon gecikmesi
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    gsap.from(".subeler .row .col-md-4", {
+        duration: 1,
+        opacity: 0,
+        y: 50,
+        scrollTrigger: {
+            trigger: ".subeler",
+            start: "top 80%",
+            end: "bottom 60%",
+            toggleActions: "play none none none",
+        },
+        stagger: 0.3
+    });
+});
+document.addEventListener("DOMContentLoaded", function() {
+    gsap.from(".subeler-contact .row .col-md-4", {
+        duration: 1,
+        opacity: 0,
+        y: 50,
+        scrollTrigger: {
+            trigger: ".subeler-contact",
+            start: "top 80%",
+            end: "bottom 60%",
+            toggleActions: "play none none none",
+        },
+        stagger: 0.3
+    });
+});
+document.addEventListener("DOMContentLoaded", function() {
+    gsap.from(".subeler-detail .row .col-6", {
+        duration: 1,
+        opacity: 0,
+        y: 50,
+        stagger: 0.3
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const titles = document.querySelectorAll(".split-title");
+    titles.forEach(title => {
+        const chars = title.textContent.split("").map(char => `<span>${char}</span>`).join("");
+        title.innerHTML = chars;
+
+        gsap.fromTo(title.querySelectorAll("span"),
+            {
+                y: 100,
+                opacity: 0,
+            },
+            {
+                y: 0,
+                opacity: 1,
+                ease: "power4.out",
+                scrollTrigger: {
+                    trigger: title,
+                    start: "top 80%",
+                    end: "bottom 60%",
+                    toggleActions: "play none none none",
+                },
+                stagger: 0.05 // Her harf arası animasyon gecikmesi
+            }
+        );
     });
 });
