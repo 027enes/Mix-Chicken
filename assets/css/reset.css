@@ -9,6 +9,9 @@
 a{
     text-decoration: none !important;
 }
+li{
+    list-style : none !important;
+}
 html,
 body {
     height: 100%;

@@ -1,43 +1,83 @@
-document.addEventListener("DOMContentLoaded", function() {
-    gsap.registerPlugin(ScrollTrigger);
+// Wait for the DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+    const timeline = gsap.timeline({ defaults: { duration: 1 } });
 
-    // Cihaz genişliğini kontrol etmek için yardımcı fonksiyon
-    function isMobile() {
-        return window.innerWidth <= 768;
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+
+    if (isMobile) {
+        timeline.from(".about-us-img-one img", {
+            y: 200,
+            opacity: 0,
+            duration: 1
+        });
+
+        timeline.from(".about-us-img-two img", {
+            y: 200,
+            opacity: 0,
+            duration: 1
+        }, "-=0.5");
+    } else {
+        timeline.from(".about-us-img-one img", {
+            x: -200,
+            opacity: 0,
+            duration: 1
+        });
+
+        timeline.from(".about-us-img-two img", {
+            x: 200,
+            opacity: 0,
+            duration: 1
+        }, "-=0.5");
     }
 
-    // Resimler için animasyon
-    gsap.from(".about-us-image", {
-        duration: 1.5,
-        x: isMobile() ? 0 : 100,
-        y: isMobile() ? 100 : 0,
+    timeline.from(".about-us-subtitle", {
+        y: 50,
         opacity: 0,
-        ease: "power4.out",
-        scrollTrigger: {
-            trigger: ".about-us",
-            start: "top 80%",
-            end: "bottom 60%",
-            toggleActions: "play none none none",
+        duration: 1,
+        onStart: () => {
+            gsap.set(".about-us-subtitle", {
+                text: {
+                    value: "Hakkımızda",
+                    newClass: "split-text"
+                }
+            });
         }
     });
 
-    // Metinler için animasyon (aşağıdan yukarıya)
-    gsap.from(".about-us-content, .about-us-list, .about-us-desc", {
-        duration: 1.5,
-        y: 100,
+    timeline.from(".about-us-title", {
+        y: 50,
         opacity: 0,
-        ease: "power4.out",
-        scrollTrigger: {
-            trigger: ".about-us",
-            start: "top 80%",
-            end: "bottom 60%",
-            toggleActions: "play none none none",
-        },
-        stagger: 0.3 // Animasyonları arka arkaya oynatır
-    });
+        duration: 1,
+        onStart: () => {
+            gsap.set(".about-us-title", {
+                text: {
+                    value: "Mix Chicken Hakkında",
+                    newClass: "split-text"
+                }
+            });
+        }
+    }, "-=0.5");
 
-    // Split animasyon için about-us-title
-    const title = document.querySelector(".about-us-title");
+    timeline.from(".about-us-description", {
+        y: 50,
+        opacity: 0,
+        duration: 1
+    }, "-=0.5");
+
+    timeline.from(".about-us-button", {
+        scale: 0,
+        opacity: 0,
+        duration: 0.5
+    }, "-=0.5");
+
+    timeline.to({}, { duration: 0, repeat: 0 });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const title = document.querySelector(".coming-soon-title");
     const chars = title.textContent.split("").map(char => `<span>${char}</span>`).join("");
     title.innerHTML = chars;
 
@@ -47,102 +87,25 @@ document.addEventListener("DOMContentLoaded", function() {
         opacity: 0,
         ease: "power4.out",
         scrollTrigger: {
-            trigger: ".about-us",
+            trigger: ".coming-soon-title",
             start: "top 80%",
             end: "bottom 60%",
             toggleActions: "play none none none",
         },
         stagger: 0.05 // Her harf arası animasyon gecikmesi
     });
-});
 
-document.addEventListener("DOMContentLoaded", function() {
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.from(".productCategory", {
+    gsap.from(".subeler-card", {
         duration: 1.5,
         y: 100,
         opacity: 0,
         ease: "power4.out",
         scrollTrigger: {
-            trigger: ".productCategory",
+            trigger: ".subeler-card",
             start: "top 80%",
             end: "bottom 60%",
             toggleActions: "play none none none",
         }
-    });
-
-    gsap.from(".products-tabs", {
-        duration: 1.5,
-        y: 100,
-        opacity: 0,
-        ease: "power4.out",
-        scrollTrigger: {
-            trigger: ".products-tabs",
-            start: "top 80%",
-            end: "bottom 60%",
-            toggleActions: "play none none none",
-        }
-    });
-
-    const title = document.querySelector(".products-title");
-    const chars = title.textContent.split("").map(char => `<span>${char}</span>`).join("");
-    title.innerHTML = chars;
-
-    gsap.from(title.querySelectorAll("span"), {
-        duration: 1,
-        y: 100,
-        opacity: 0,
-        ease: "power4.out",
-        scrollTrigger: {
-            trigger: ".products-animation",
-            start: "top 80%",
-            end: "bottom 60%",
-            toggleActions: "play none none none",
-        },
-        stagger: 0.05 // Her harf arası animasyon gecikmesi
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    gsap.registerPlugin(ScrollTrigger);
-
-    // Split animasyon için promo-deal-animation
-    const title = document.querySelector(".promo-deal-animation");
-    const mixChickenTitle = title.querySelector(".mix-chicken-title");
-
-    // "Mix Chicken" kısmını ayır ve bir değişkene kaydet
-    const mixChickenHTML = mixChickenTitle.outerHTML;
-
-    // "Mix Chicken" kısmını metinden çıkar
-    const textBefore = title.innerHTML.split(mixChickenHTML)[0];
-    const textAfter = title.innerHTML.split(mixChickenHTML)[1];
-
-    // Karakterleri sarma fonksiyonu
-    function wrapChars(text) {
-        return text.split("").map(char => `<span class="char">${char}</span>`).join("");
-    }
-
-    // "Mix Chicken" kısmını da parçala
-    const mixChickenChars = mixChickenTitle.textContent.split("").map(char => `<span class="mix-chicken-char">${char}</span>`).join("");
-
-    // Yeni içeriği oluştur
-    title.innerHTML = wrapChars(textBefore) + `<span class="mix-chicken-title">${mixChickenChars}</span>` + wrapChars(textAfter);
-
-    // GSAP animasyonu
-    gsap.from(title.querySelectorAll("span"), {
-        duration: 1,
-        y: 100,
-        opacity: 0,
-        ease: "power4.out",
-        scrollTrigger: {
-            trigger: ".promo-deal-animation",
-            start: "top 80%",
-            end: "bottom 60%",
-            toggleActions: "play none none none",
-            once: true
-        },
-        stagger: 0.05 // Her harf arası animasyon gecikmesi
     });
 });
 
@@ -198,45 +161,138 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+
+document.addEventListener('DOMContentLoaded', () => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const titles = document.querySelectorAll(".about-us-services-title-animation");
-    titles.forEach(title => {
-        const words = title.textContent.split(" ").map(word => `<span>${word}</span>`).join(" ");
-        title.innerHTML = words;
+    const timeline = gsap.timeline({ defaults: { duration: 1 } });
 
-        gsap.fromTo(title.querySelectorAll("span"),
-            {
-                y: 100,
-                opacity: 0,
-            },
-            {
-                y: 0,
-                opacity: 1,
-                ease: "power4.out",
-                scrollTrigger: {
-                    trigger: title,
-                    start: "top 80%",
-                    end: "bottom 60%",
-                    toggleActions: "play none none none",
-                },
-                stagger: 0.2 // Her kelime arası animasyon gecikmesi
-            }
-        );
-    });
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+
+    if (isMobile) {
+        timeline.from(".mission-vision-images img", {
+            y: 200,
+            opacity: 0,
+            duration: 1
+        });
+
+        timeline.from(".mission-vision-title", {
+            y: 50,
+            opacity: 0,
+            duration: 1
+        }, "-=0.5");
+
+        timeline.from(".accordion-item", {
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.1
+        }, "-=0.5");
+    } else {
+        timeline.from(".mission-vision-images img", {
+            x: 200,
+            opacity: 0,
+            duration: 1
+        });
+
+        timeline.from(".mission-vision-title", {
+            y: 50,
+            opacity: 0,
+            duration: 1
+        }, "-=0.5");
+
+        timeline.from(".accordion-item", {
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.1
+        }, "-=0.5");
+    }
+
+    timeline.to({}, { duration: 0, repeat: 0 });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+
+
+document.addEventListener('DOMContentLoaded', () => {
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.from(".about-us-services-animation", {
-        duration: 1.5,
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+
+    const title = document.querySelector(".certificates-title");
+    const chars = title.textContent.split("").map(char => `<span>${char}</span>`).join("");
+    title.innerHTML = chars;
+
+    gsap.from(title.querySelectorAll("span"), {
+        duration: 1,
         y: 100,
         opacity: 0,
         ease: "power4.out",
         scrollTrigger: {
-            trigger: ".about-us-services-animation",
+            trigger: ".certificates-title",
+            start: "top 80%",
+            end: "bottom 60%",
+            toggleActions: "play none none none",
+        },
+        stagger: 0.05 // Her harf arası animasyon gecikmesi
+    });
+
+    if (isMobile) {
+        gsap.from(".swiper-slide img", {
+            y: 200,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: ".certificatesSwiper",
+                start: "top 80%",
+                end: "bottom 60%",
+                toggleActions: "play none none none",
+            }
+        });
+    } else {
+        gsap.from(".swiper-slide img", {
+            x: 200,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: ".certificatesSwiper",
+                start: "top 80%",
+                end: "bottom 60%",
+                toggleActions: "play none none none",
+            }
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const title = document.querySelector(".kalite-politikalari-title");
+    const chars = title.textContent.split("").map(char => `<span>${char}</span>`).join("");
+    title.innerHTML = chars;
+
+    gsap.from(title.querySelectorAll("span"), {
+        duration: 1,
+        y: 100,
+        opacity: 0,
+        ease: "power4.out",
+        scrollTrigger: {
+            trigger: ".kalite-politikalari-title",
+            start: "top 80%",
+            end: "bottom 60%",
+            toggleActions: "play none none none",
+        },
+        stagger: 0.05 // Her harf arası animasyon gecikmesi
+    });
+
+    gsap.from(".kalite-politikalari-desc", {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+            trigger: ".kalite-politikalari-desc",
             start: "top 80%",
             end: "bottom 60%",
             toggleActions: "play none none none",
@@ -267,7 +323,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     trigger: title,
                     start: "top 80%",
                     end: "bottom 60%",
-                    toggleActions: "play none none reverse",
+                    toggleActions: "play none none none",
                 },
                 stagger: 0.05 // Her harf arası animasyon gecikmesi
             }
@@ -289,25 +345,5 @@ document.addEventListener("DOMContentLoaded", function() {
             toggleActions: "play none none none",
         },
         stagger: 0.2 // Her öğe arası animasyon gecikmesi
-    });
-});
-
-
-/*News Page*/
-document.addEventListener("DOMContentLoaded", function() {
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.from(".news-items", {
-        duration: 1,
-        y: 100,
-        opacity: 0,
-        ease: "power4.out",
-        scrollTrigger: {
-            trigger: ".news-page",
-            start: "top 90%",
-            end: "bottom 60%",
-            toggleActions: "play none none none",
-        },
-        stagger: 0.08 // Her öğe arası animasyon gecikmesi
     });
 });

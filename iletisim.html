@@ -6,52 +6,63 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mix Chicken</title>
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/resposive.css">
-  <!--Slider -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-  <!--Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!---Font-->
+  <!--Google Fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
-<header id="header">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-10 col-7">
-        <div class="row align-items-center">
-          <div class="col-sm-2 col-12 logo p-0">
-            <a href="index.html">
-              <img src="assets/images/logo.png" alt="Mix Chicken">
-            </a>
-          </div>
-          <div class="menu col-10" id="navigation">
-            <ul class="navigation-content">
-              <li class="navigation-list"><a class="navigation-list-item" href="index.html">Anasayfa</a></li>
-              <li class="navigation-list"><a class="navigation-list-item" href="kurumsal.html">Kurumsal</a></li>
-              <li class="navigation-list"><a class="navigation-list-item" href="subeler.html">Şubelerimiz</a></li>
-              <li class="navigation-list"><a class="navigation-list-item" href="haberler.html">Haberler</a></li>
-              <li class="navigation-list"><a class="navigation-list-item" href="franchise.html">Franchise</a></li>
-              <li class="navigation-list"><a class="navigation-list-item active" href="iletisim.html">İletişim</a></li>
-            </ul>
-          </div>
 
-        </div>
+<!-- Header -->
+<header>
+  <div class="container">
+    <div class="row d-flex align-items-center justify-content-between">
+      <div class="col-lg-2 col-4">
+        <a href="index.html" class="logo-img">
+          <img src="assets/images/logo.png" alt="Mix Chicken" class="logo">
+        </a>
       </div>
-      <div class="col-md-2 col-3 contact-content">
-        <div class="row h-100">
-          <div class="search col-12">
-            <a href="#" id="searchBtn" >
-              <i class="fas fa-search"></i>
-            </a>
-          </div>
-        </div>
+      <div  class="col-xl-8 col-lg-6 col-1">
+        <nav id="navigation" class="navigation">
+          <ul class="navigation-lists">
+            <li class="navigation-list"><a class="navigation-list-text" href="index.html">Anasayfa</a></li>
+            <li class="navigation-list dropdown-list">
+              <a class="navigation-list-text">Kurumsal</a>
+              <ul class="dropdown">
+                <li><a href="kurumsal.html">Kurumsal</a></li>
+                <li><a href="kurumsal.html#misyon-vizyon">Misyon & Vizyon</a></li>
+                <li><a href="sss.html">SSS</a></li>
+                <li><a href="kalite-politikalari.html">Kalite Politikası</a></li>
+              </ul>
+            </li>
+            <li class="navigation-list"><a class="navigation-list-text" href="subeler.html">Şubelerimiz</a></li>
+            <li class="navigation-list"><a class="navigation-list-text" href="haberler.html">Haberler</a></li>
+            <li class="navigation-list"><a class="navigation-list-text" href="iletisim.html">İletişim</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-xl-2 col-md-4 col-5 p-0 flex-content">
+        <button class="button">
+          <a href="">Franchise Formu</a>
+          <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+            <path
+                    clip-rule="evenodd"
+                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                    fill-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
       </div>
       <label class="col-2 hamburger" >
         <input id="hamburgerBtn" type="checkbox">
@@ -86,7 +97,6 @@
     </div>
   </div>
 </section>
-
 <!-- Contacts -->
 <section class="contacts">
   <div class="container">
@@ -96,9 +106,9 @@
           <div class="contact-item-icon">
             <i class="fas fa-map marker"></i>
           </div>
-            <div class="contact-item-content">
-                <p>1234 Street Name, City Name, United States</p>
-            </div>
+          <div class="contact-item-content">
+            <p>1234 Street Name, City Name, United States</p>
+          </div>
         </div>
       </div>
       <div class="col-md-4 col-12">
@@ -182,9 +192,8 @@
   </div>
 </section>
 
-
 <!-- Footer -->
-<footer class="footer news-footer">
+<footer class="footer">
   <div class="container">
     <div class="row flex-md-row flex-sm-column">
       <div class="col-md-3 col-12">
@@ -239,36 +248,12 @@
   </div>
 </footer>
 
-<!-- Search Content -->
-<section id="search-content" class="search-content">
-  <div class="container">
-    <div class="search-content-wrapper">
-      <div class="search-content-header">
-        <div id="closeBtn" class="search-content-close">
-          <i class="fas fa-times"></i>
-        </div>
-      </div>
-      <div class="search-content-body">
-        <h2 class="search-content-title">Ürün Ara</h2>
-        <form action="#" method="post">
-          <input type="text" name="search" placeholder="Ara...">
-          <button type="submit"><i class="fas fa-search"></i></button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/main.js"></script>
 <script src="assets/js/gsap.js"></script>
-<<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-
-
 
 </script>
 </body>

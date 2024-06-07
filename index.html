@@ -6,52 +6,63 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mix Chicken</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/resposive.css">
-    <!--Slider -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <!--Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!---Font-->
+    <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
-<header id="header">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10 col-7">
-                <div class="row align-items-center">
-                    <div class="col-sm-2 col-12 logo p-0">
-                        <a href="index.html">
-                            <img src="assets/images/logo.png" alt="Mix Chicken">
-                        </a>
-                    </div>
-                    <div class="menu col-10" id="navigation">
-                        <ul class="navigation-content">
-                            <li class="navigation-list"><a class="navigation-list-item active" href="index.html">Anasayfa</a></li>
-                            <li class="navigation-list"><a class="navigation-list-item" href="kurumsal.html">Kurumsal</a></li>
-                            <li class="navigation-list"><a class="navigation-list-item" href="subeler.html">Şubelerimiz</a></li>
-                            <li class="navigation-list"><a class="navigation-list-item" href="haberler.html">Haberler</a></li>
-                            <li class="navigation-list"><a class="navigation-list-item" href="franchise.html">Franchise</a></li>
-                            <li class="navigation-list"><a class="navigation-list-item" href="iletisim.html">İletişim</a></li>
-                        </ul>
-                    </div>
 
-                </div>
+<!-- Header -->
+<header>
+    <div class="container">
+        <div class="row d-flex align-items-center justify-content-between">
+            <div class="col-lg-2 col-4">
+                <a href="index.html" class="logo-img">
+                    <img src="assets/images/logo.png" alt="Mix Chicken" class="logo">
+                </a>
             </div>
-            <div class="col-md-2 col-3 contact-content">
-                <div class="row h-100">
-                    <div class="search col-12">
-                        <a href="#" id="searchBtn" >
-                            <i class="fas fa-search"></i>
-                        </a>
-                    </div>
-                </div>
+            <div  class="col-xl-8 col-lg-6 col-1">
+                <nav id="navigation" class="navigation">
+                    <ul class="navigation-lists">
+                        <li class="navigation-list"><a class="navigation-list-text" href="index.html">Anasayfa</a></li>
+                        <li class="navigation-list dropdown-list">
+                            <a class="navigation-list-text">Kurumsal</a>
+                            <ul class="dropdown">
+                                <li><a href="kurumsal.html">Kurumsal</a></li>
+                                <li><a href="kurumsal.html#misyon-vizyon">Misyon & Vizyon</a></li>
+                                <li><a href="sss.html">SSS</a></li>
+                                <li><a href="kalite-politikalari.html">Kalite Politikası</a></li>
+                            </ul>
+                        </li>
+                        <li class="navigation-list"><a class="navigation-list-text" href="subeler.html">Şubelerimiz</a></li>
+                        <li class="navigation-list"><a class="navigation-list-text" href="haberler.html">Haberler</a></li>
+                        <li class="navigation-list"><a class="navigation-list-text" href="iletisim.html">İletişim</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-xl-2 col-md-4 col-5 p-0 flex-content">
+                <button class="button">
+                    <a href="">Franchise Formu</a>
+                    <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+                        <path
+                                clip-rule="evenodd"
+                                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                                fill-rule="evenodd"
+                        ></path>
+                    </svg>
+                </button>
             </div>
             <label class="col-2 hamburger" >
                 <input id="hamburgerBtn" type="checkbox">
@@ -64,65 +75,22 @@
     </div>
 </header>
 
-<!-- Home Page Slider -->
-<section class="home-slider" id="home-slider">
-    <div class="swiper HomeSlider">
+<!-- Slider -->
+<section class="home-slider">
+    <div class="swiper homeSlider">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="swiper-slide-row">
-                    <div class="swiper-slide-content">
-                        <h1 class="swiper-slide-title">Lezzetli Tavuklar</h1>
-                        <p class="swiper-slide-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, alias. lorem elit. Adipisci, alias. lorem elit. Adipisci, alias. lorem </p>
-                        <a href="#" class="swiper-slide-button">Daha Fazla <span class="swiper-arrow-right"><i class="fas fa-arrow-right"></i></span></a>
-                    </div>
-                    <div class="swiper-slide-img doner-animation">
-                        <img src="assets/images/slider/doner.png" alt="Slider Image">
-                    </div>
-                    <div class="swiper-icon">
-                        <div class="doner-icon">
-                            <img src="assets/images/slider/doner-icon.png" alt="Doner Icon">
-                        </div>
-                        <div class="patates-icon">
-                            <img src="assets/images/slider/patates-icon.png" alt="Patates Icon">
-                        </div>
-                        <div class="sogan-icon">
-                            <img src="assets/images/slider/sogan-icon.png" alt="Sogan Icon">
-                        </div>
-                        <div class="domates-icon">
-                            <img src="assets/images/slider/domates-icon.png" alt="Domates Icon">
-                        </div>
-                    </div>
+            <div class="swiper-slide" style="background-image: url(assets/images/slider/mp-banner@2x.jpg)">
+                <div class="swiper-text">
+                    <h1 class="swiper-title">Lezzetli Tavuklar</h1>
+                    <p class="swiper-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc nec ultricies.</p>
+                    <a href="#" class="swiper-button">Detaylar</a>
                 </div>
             </div>
-            <div class="swiper-slide">
-                <div class="swiper-slide-row">
-                    <div class="swiper-slide-content">
-                        <h1 class="swiper-slide-title">Lezzetli Tavuklar</h1>
-                        <p class="swiper-slide-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, alias. lorem elit. Adipisci, alias. lorem elit. Adipisci, alias. lorem </p>
-                        <a href="#" class="swiper-slide-button">Daha Fazla <span class="swiper-arrow-right"><i class="fas fa-arrow-right"></i></span></a>
-                    </div>
-                    <div class="swiper-slide-img doner-animation">
-                        <img src="assets/images/slider/doner.png" alt="Slider Image">
-                    </div>
-                    <div class="swiper-icon">
-                        <div class="doner-icon">
-                            <img src="assets/images/slider/doner-icon.png" alt="Doner Icon">
-                        </div>
-                        <div class="patates-icon">
-                            <img src="assets/images/slider/patates-icon.png" alt="Patates Icon">
-                        </div>
-                        <div class="sogan-icon">
-                            <img src="assets/images/slider/sogan-icon.png" alt="Sogan Icon">
-                        </div>
-                        <div class="domates-icon">
-                            <img src="assets/images/slider/domates-icon.png" alt="Domates Icon">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-slide-img">
-                    <img src="assets/images/slider/swiper-doner-bg.webp" alt="Slider Image">
+            <div class="swiper-slide" style="background-image: url(assets/images/slider/mp-banner@2x.jpg)">
+                <div class="swiper-text">
+                    <h1 class="swiper-title">Lezzetli Tavuklar</h1>
+                    <p class="swiper-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc nec ultricies.</p>
+                    <a href="#" class="swiper-button">Detaylar</a>
                 </div>
             </div>
         </div>
@@ -131,277 +99,126 @@
     </div>
 </section>
 
-<!-- Categories -->
-<section class="categories" id="category">
-    <div class="swiper homeCategory">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="category-content">
-                    <div class="category-image">
-                        <img src="assets/images/category/1.png" alt="Doner">
-                    </div>
-                    <h3>Tavuk Döner</h3>
-                    <a href="" class="products-btn">ÜRÜNLERİ İNCELE</a>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="category-content">
-                    <div class="category-image">
-                        <img src="assets/images/category/2.png" alt="Doner">
-                    </div>
-                    <h3>Et Döner</h3>
-                    <a href="" class="products-btn">ÜRÜNLERİ İNCELE</a>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="category-content">
-                    <div class="category-image">
-                        <img src="assets/images/category/3.png" alt="Doner">
-                    </div>
-                    <h3>Çocuk Menü</h3>
-                    <a href="" class="products-btn">ÜRÜNLERİ İNCELE</a>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="category-content">
-                    <div class="category-image">
-                        <img src="assets/images/category/4.png" alt="Doner">
-                    </div>
-                    <h3>Menü</h3>
-                    <a href="" class="products-btn">ÜRÜNLERİ İNCELE</a>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="category-content">
-                    <div class="category-image">
-                        <img src="assets/images/category/pepsi.png" alt="Doner">
-                    </div>
-                    <h3>İçecekler</h3>
-                    <a href="" class="products-btn">ÜRÜNLERİ İNCELE</a>
-                </div>
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-</section>
-
 <!-- About Us -->
-<section class="about-us" id="about-us">
-    <div class="about-us-icon">
-        <img src="assets/images/icon/ldp_decor-2.png" alt="About Us Icon">
-    </div>
+<section class="about-us">
     <div class="container">
-        <div class="row flex-md-row flex-column-reverse">
-            <div class="col-md-8 col-12">
-                <div class="about-us-content">
-                    <h2 class="about-us-title">Mix Chicken Döner Taze ve Lezzetli Tavuk Dönerler</h2>
-                    <p class="about-us-desc about-us-home">Mix Chicken, tavuk lezzetinin yeniden tanımlandığı, kaliteli ve taze
-                        ürünleriyle fark yaratan bir markadır. Bizim için önemli olan sadece lezzetli yemekler sunmak
-                        değil, aynı zamanda sağlıklı ve güvenilir ürünler sunmaktır. Her bir ürünümüz, titizlikle
-                        seçilen taze ve doğal malzemelerden hazırlanmakta ve özenle işlenmektedir.
-                        Müşterilerimize sunduğumuz her yemeğin arkasında uzun yıllara dayanan tecrübemiz ve uzman
-                        kadromuz bulunmaktadır. Mix Chicken olarak, tavuk ürünlerini en yüksek kalite standartlarında
-                        üretmekte ve siz değerli müşterilerimizin beğenisine sunmaktayız.
-                        Geniş ürün yelpazemiz, klasik tavuk yemeklerinden, modern ve yaratıcı tariflere kadar
-                        uzanmaktadır. Amacımız, her damağa hitap eden, zengin ve çeşitli lezzetler sunarak, tavuk
-                        severlerin vazgeçilmezi olmaktır. Tavuk etinin en lezzetli ve sağlıklı hali ile sofralarınıza
-                        getirdiğimiz ürünlerimizle, aileniz ve sevdiklerinizle birlikte keyifli anlar yaşamanızı
-                        hedefliyoruz.
-                    </p>
-                    <div class="about-content">
-                        <div class="about-us-list">
-                            <div class="about-us-list-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 112.14 111.98" class="svg replaced-svg"><defs><style>.cls-1{fill-rule:evenodd;}.cls-2{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title>quality</title><path class="cls-1" d="M60.42,112a16.07,16.07,0,0,0,12.22-5.24c.8-.85,3.76-.48,3.76-.48a4.07,4.07,0,0,1,0,1.48c-.12.72-1.36,4.18.45,4.24s.94,0,.94,0,.9.17.94-1.91c0-1.41-1-1.68-.94-2.86s.29-.92.94-1a12.3,12.3,0,0,0,9.4-5.24,11.08,11.08,0,0,1,3.29,0c1,.2,5.17-4.33,5.64-5.24s1.25,1.19,1.88,1a3.26,3.26,0,0,0,1.41-1.43,7.5,7.5,0,0,0,0-4.76c0-.11,4-3.3,3.76-8.1,0-.56,2.58,1,4.7-.48a3.36,3.36,0,0,0,1.41-2.86,9.11,9.11,0,0,0-2.35-4.29c-.3-.25,0-2.86,0-2.86a3.1,3.1,0,0,1-.47-1.91c.08-1.15.74-2.38.94-3.81s.39-3.93.47-4.29,3.21-2.42,3.29-3.81-1-4.15-3.29-4.76c-.08,0-1.33-6.39-1.41-7.15s-1-1.23-.47-2.86,1-1.39.94-1.91a9.64,9.64,0,0,0-2.35-5.24s1.94-2,1.88-2.86C107.3,31.72,104.17,31,99.9,31c-1.14,0-2.47-6.63-1.41-8.1.21-.29-2.79-1.28-5.64-3.33-3.41-2.45-6.84-6.11-7.52-7.62-1.25-2.78-9.83-7.38-13.16-8.1s-4.23-.48-4.23-.48.7-1.31.94-1.91S68.73,0,68.41,0s-1.76.32-1.88,1.43a8.36,8.36,0,0,0,0,1.91,19.73,19.73,0,0,1-6.58-1C56.82,1.27,53.61,0,52,0S43.63,2.27,43,2.86s-1.76-.91-1.88-1-1.88.79-1.88,1.91c0,.4-5.13-1.43-6.11,2.38,0,.08-.47,0-.47,0s-4.5-3.61-5.64-3.33.7,4.45.94,4.76-2.19-.28-2.82,1.43c-.06.16-1.92.52-2.35,0-.26-.31-6.46-8.58-7-8.58S19.62,8.3,19.54,11a9.85,9.85,0,0,1-1.41,4.76c-.08.08-2-1-2.82,0a30.93,30.93,0,0,0-3.76,6.19c-.05.15-1.41,0-1.41,0s-3.05-2.58-4.7-2.38a2.19,2.19,0,0,0-1.88,1.91c0,.08,4.27-1.47,7,3.81,0,0,0,1,0,1S7,31,3.09,31C1,31,6.31,33.63,6.85,33.83S6,35.42,5.91,36.21s-3-.37-3.76.48a1.77,1.77,0,0,0,.47,2.38c.9.6,2.82,0,2.82,0s1,4.65-5.17,8.1C-.79,47.77,4,49.07,4,49.07s.39,6.55,1.41,7.62S2.1,60.39,2.62,61.46c.12.24,1.84.2,1.88,1.43.06,2-.09,5.41,1.41,6.19L4.5,70.51s1.21,1.91.94,3.33a6.53,6.53,0,0,1-1.88,2.86,24,24,0,0,1,3.29-1,8.17,8.17,0,0,1,2.35,0S9.74,81.54,13,84.8c1.17,1.19,4.66,8.42,6.58,10s7.83,7.7,9.87,8.58,8.5,4.92,8.93,5.72,10.69.44,11.75.48c.52,0,2.28,1.32,4.7,1.91A24.5,24.5,0,0,0,60.42,112Z"></path><path class="cls-2" d="M76,84.08l5.9-34.56C76.75,53.34,72,57,68.63,62.28a2.22,2.22,0,0,1-1.86,1c-1.23,0-2-1.06-2.24-2.32-.72-4.15-6.11-14.59-8.46-18.19-2.35,3.6-7.75,14-8.46,18.19-.22,1.26-1,2.32-2.24,2.32a2.22,2.22,0,0,1-1.93-1.14c-2.61-4.61-8.73-9.08-13.22-12.32l5.85,34.22Zm6.86-49a4.2,4.2,0,1,0,4.2,4.2,4.2,4.2,0,0,0-4.2-4.2Zm-53.6-.51a4.2,4.2,0,1,0,4.2,4.2,4.2,4.2,0,0,0-4.2-4.2Zm26.8-6.7a4.2,4.2,0,1,0,4.2,4.2,4.2,4.2,0,0,0-4.2-4.2Z"></path></svg></path>
-                            </div>
-                            <div class="about-us-text">
-                                <h3>Üstün Kalite</h3>
-                                <p>En kaliteli ürünleri seçerek uzman ekibimize emanet ediyoruz.</p>
-                            </div>
-                        </div>
-                        <div class="about-us-list">
-                            <div class="about-us-list-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 112.14 111.98" class="svg replaced-svg"><defs><style>.cls-1{fill-rule:evenodd;}.cls-2{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title>fresh</title><path class="cls-1" d="M60.42,112a16.07,16.07,0,0,0,12.22-5.24c.8-.85,3.76-.48,3.76-.48a4.07,4.07,0,0,1,0,1.48c-.12.72-1.36,4.18.45,4.24s.94,0,.94,0,.9.17.94-1.91c0-1.41-1-1.68-.94-2.86s.29-.92.94-1a12.3,12.3,0,0,0,9.4-5.24,11.08,11.08,0,0,1,3.29,0c1,.2,5.17-4.33,5.64-5.24s1.25,1.19,1.88,1a3.26,3.26,0,0,0,1.41-1.43,7.5,7.5,0,0,0,0-4.76c0-.11,4-3.3,3.76-8.1,0-.56,2.58,1,4.7-.48a3.36,3.36,0,0,0,1.41-2.86,9.11,9.11,0,0,0-2.35-4.29c-.3-.25,0-2.86,0-2.86a3.1,3.1,0,0,1-.47-1.91c.08-1.15.74-2.38.94-3.81s.39-3.93.47-4.29,3.21-2.42,3.29-3.81-1-4.15-3.29-4.76c-.08,0-1.33-6.39-1.41-7.15s-1-1.23-.47-2.86,1-1.39.94-1.91a9.64,9.64,0,0,0-2.35-5.24s1.94-2,1.88-2.86C107.3,31.72,104.17,31,99.9,31c-1.14,0-2.47-6.63-1.41-8.1.21-.29-2.79-1.28-5.64-3.33-3.41-2.45-6.84-6.11-7.52-7.62-1.25-2.78-9.83-7.38-13.16-8.1s-4.23-.48-4.23-.48.7-1.31.94-1.91S68.73,0,68.41,0s-1.76.32-1.88,1.43a8.36,8.36,0,0,0,0,1.91,19.73,19.73,0,0,1-6.58-1C56.82,1.27,53.61,0,52,0S43.63,2.27,43,2.86s-1.76-.91-1.88-1-1.88.79-1.88,1.91c0,.4-5.13-1.43-6.11,2.38,0,.08-.47,0-.47,0s-4.5-3.61-5.64-3.33.7,4.45.94,4.76-2.19-.28-2.82,1.43c-.06.16-1.92.52-2.35,0-.26-.31-6.46-8.58-7-8.58S19.62,8.3,19.54,11a9.85,9.85,0,0,1-1.41,4.76c-.08.08-2-1-2.82,0a30.93,30.93,0,0,0-3.76,6.19c-.05.15-1.41,0-1.41,0s-3.05-2.58-4.7-2.38a2.19,2.19,0,0,0-1.88,1.91c0,.08,4.27-1.47,7,3.81,0,0,0,1,0,1S7,31,3.09,31C1,31,6.31,33.63,6.85,33.83S6,35.42,5.91,36.21s-3-.37-3.76.48a1.77,1.77,0,0,0,.47,2.38c.9.6,2.82,0,2.82,0s1,4.65-5.17,8.1C-.79,47.77,4,49.07,4,49.07s.39,6.55,1.41,7.62S2.1,60.39,2.62,61.46c.12.24,1.84.2,1.88,1.43.06,2-.09,5.41,1.41,6.19L4.5,70.51s1.21,1.91.94,3.33a6.53,6.53,0,0,1-1.88,2.86,24,24,0,0,1,3.29-1,8.17,8.17,0,0,1,2.35,0S9.74,81.54,13,84.8c1.17,1.19,4.66,8.42,6.58,10s7.83,7.7,9.87,8.58,8.5,4.92,8.93,5.72,10.69.44,11.75.48c.52,0,2.28,1.32,4.7,1.91A24.5,24.5,0,0,0,60.42,112Z"></path><path class="cls-2" d="M35.85,38.39c2.57,15.29,6,18.19,10.29,26.34a20.55,20.55,0,0,1,1.27,3.88A26.66,26.66,0,0,1,52,65.1,17.72,17.72,0,0,1,57,63.21c5.88-1.44,11.79-.32,16.5.55M57.47,60.48c2.32-4,7.42-6.33,14.88-2.49,2.72,1.4,5.72,4.69,11.35,6.69C76.14,67.72,73.37,74,67.87,75c-7.53,1.29-11.29-3.09-11.77-8-4.46,1.84-7.06,4.8-9.42,8.18C44.47,78.36,44,80.28,43,84l-4-2.53a36.7,36.7,0,0,1,4.2-8c.89-3.09,1.09-6-.34-8.14-5.44,1.59-12.05-1.53-14.19-12.27C27.18,45.41,32.57,39.22,32.31,28c4.7,6.65,9.54,9.3,12.27,12.33,8.51,9.5,7.17,18.13,2.68,22.47"></path></svg></path>                            </div>
-                            <div class="about-us-text">
-                                <h3>Her Daim Taze</h3>
-                                <p>En taze sebzeleri sizler için özenle seçiyoruz.  </p>
-                            </div>
-                        </div>
-                        <div class="about-us-list">
-                            <div class="about-us-list-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 112.14 111.98" class="svg replaced-svg"><defs><style>.cls-1{fill-rule:evenodd;}.cls-2{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title>dish</title><path class="cls-1" d="M60.42,112a16.07,16.07,0,0,0,12.22-5.24c.8-.85,3.76-.48,3.76-.48a4.07,4.07,0,0,1,0,1.48c-.12.72-1.36,4.18.45,4.24s.94,0,.94,0,.9.17.94-1.91c0-1.41-1-1.68-.94-2.86s.29-.92.94-1a12.3,12.3,0,0,0,9.4-5.24,11.08,11.08,0,0,1,3.29,0c1,.2,5.17-4.33,5.64-5.24s1.25,1.19,1.88,1a3.26,3.26,0,0,0,1.41-1.43,7.5,7.5,0,0,0,0-4.76c0-.11,4-3.3,3.76-8.1,0-.56,2.58,1,4.7-.48a3.36,3.36,0,0,0,1.41-2.86,9.11,9.11,0,0,0-2.35-4.29c-.3-.25,0-2.86,0-2.86a3.1,3.1,0,0,1-.47-1.91c.08-1.15.74-2.38.94-3.81s.39-3.93.47-4.29,3.21-2.42,3.29-3.81-1-4.15-3.29-4.76c-.08,0-1.33-6.39-1.41-7.15s-1-1.23-.47-2.86,1-1.39.94-1.91a9.64,9.64,0,0,0-2.35-5.24s1.94-2,1.88-2.86C107.3,31.72,104.17,31,99.9,31c-1.14,0-2.47-6.63-1.41-8.1.21-.29-2.79-1.28-5.64-3.33-3.41-2.45-6.84-6.11-7.52-7.62-1.25-2.78-9.83-7.38-13.16-8.1s-4.23-.48-4.23-.48.7-1.31.94-1.91S68.73,0,68.41,0s-1.76.32-1.88,1.43a8.36,8.36,0,0,0,0,1.91,19.73,19.73,0,0,1-6.58-1C56.82,1.27,53.61,0,52,0S43.63,2.27,43,2.86s-1.76-.91-1.88-1-1.88.79-1.88,1.91c0,.4-5.13-1.43-6.11,2.38,0,.08-.47,0-.47,0s-4.5-3.61-5.64-3.33.7,4.45.94,4.76-2.19-.28-2.82,1.43c-.06.16-1.92.52-2.35,0-.26-.31-6.46-8.58-7-8.58S19.62,8.3,19.54,11a9.85,9.85,0,0,1-1.41,4.76c-.08.08-2-1-2.82,0a30.93,30.93,0,0,0-3.76,6.19c-.05.15-1.41,0-1.41,0s-3.05-2.58-4.7-2.38a2.19,2.19,0,0,0-1.88,1.91c0,.08,4.27-1.47,7,3.81,0,0,0,1,0,1S7,31,3.09,31C1,31,6.31,33.63,6.85,33.83S6,35.42,5.91,36.21s-3-.37-3.76.48a1.77,1.77,0,0,0,.47,2.38c.9.6,2.82,0,2.82,0s1,4.65-5.17,8.1C-.79,47.77,4,49.07,4,49.07s.39,6.55,1.41,7.62S2.1,60.39,2.62,61.46c.12.24,1.84.2,1.88,1.43.06,2-.09,5.41,1.41,6.19L4.5,70.51s1.21,1.91.94,3.33a6.53,6.53,0,0,1-1.88,2.86,24,24,0,0,1,3.29-1,8.17,8.17,0,0,1,2.35,0S9.74,81.54,13,84.8c1.17,1.19,4.66,8.42,6.58,10s7.83,7.7,9.87,8.58,8.5,4.92,8.93,5.72,10.69.44,11.75.48c.52,0,2.28,1.32,4.7,1.91A24.5,24.5,0,0,0,60.42,112Z"></path><path class="cls-2" d="M73.8,63.1c3.22-.11,9.55-1.68,10-5.22H28.34c.44,3.54,6.77,5.11,10,5.22ZM32.24,57.24v-.76c0-30,47.68-29.93,47.68,0v.76M55.83,38.16c8.62,0,17.23,4.8,19.08,14.39M56.07,27.86a2.37,2.37,0,1,1-2.25,2.37A2.31,2.31,0,0,1,56.07,27.86Zm15.41,51.4L54.63,84.13M66.39,79c.7-2.08.65-3.79,3.28-8,.86-1.38,3.49-4,4-5.22,2.45-3.28-4.13-2.36-5.81,0-.92,1.29-1.25,2.33-2.5,3-3.85,2-4.16-.72-7.83-4.46-2.39-2.43-7-.51-5.13,1.31M55.72,69,51.1,64.29c-2.45-2.52-6.23.11-4.15,2.06m5,4.21-5-4.21-1.71-1.63c-3-2.85-6.36.57-2.51,3.66l6.61,5.31c.67.54,8.65,6,8.5,9.5"></path></svg></path>
-                            </div>
-                            <div class="about-us-text">
-                                <h3>Lezzet Deneyimi</h3>
-                                <p>Efsane tatlar ile yepyeni bir lezzet deneyimi sunuyoruz.</p>
-                            </div>
-                        </div>
-                        <div class="about-us-list">
-                            <div class="about-us-list-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 112.14 111.98" class="svg replaced-svg"><defs><style>.cls-1{fill-rule:evenodd;}.cls-2{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title>delivery</title><path class="cls-1" d="M60.42,112a16.07,16.07,0,0,0,12.22-5.24c.8-.85,3.76-.48,3.76-.48a4.07,4.07,0,0,1,0,1.48c-.12.72-1.36,4.18.45,4.24s.94,0,.94,0,.9.17.94-1.91c0-1.41-1-1.68-.94-2.86s.29-.92.94-1a12.3,12.3,0,0,0,9.4-5.24,11.08,11.08,0,0,1,3.29,0c1,.2,5.17-4.33,5.64-5.24s1.25,1.19,1.88,1a3.26,3.26,0,0,0,1.41-1.43,7.5,7.5,0,0,0,0-4.76c0-.11,4-3.3,3.76-8.1,0-.56,2.58,1,4.7-.48a3.36,3.36,0,0,0,1.41-2.86,9.11,9.11,0,0,0-2.35-4.29c-.3-.25,0-2.86,0-2.86a3.1,3.1,0,0,1-.47-1.91c.08-1.15.74-2.38.94-3.81s.39-3.93.47-4.29,3.21-2.42,3.29-3.81-1-4.15-3.29-4.76c-.08,0-1.33-6.39-1.41-7.15s-1-1.23-.47-2.86,1-1.39.94-1.91a9.64,9.64,0,0,0-2.35-5.24s1.94-2,1.88-2.86C107.3,31.72,104.17,31,99.9,31c-1.14,0-2.47-6.63-1.41-8.1.21-.29-2.79-1.28-5.64-3.33-3.41-2.45-6.84-6.11-7.52-7.62-1.25-2.78-9.83-7.38-13.16-8.1s-4.23-.48-4.23-.48.7-1.31.94-1.91S68.73,0,68.41,0s-1.76.32-1.88,1.43a8.36,8.36,0,0,0,0,1.91,19.73,19.73,0,0,1-6.58-1C56.82,1.27,53.61,0,52,0S43.63,2.27,43,2.86s-1.76-.91-1.88-1-1.88.79-1.88,1.91c0,.4-5.13-1.43-6.11,2.38,0,.08-.47,0-.47,0s-4.5-3.61-5.64-3.33.7,4.45.94,4.76-2.19-.28-2.82,1.43c-.06.16-1.92.52-2.35,0-.26-.31-6.46-8.58-7-8.58S19.62,8.3,19.54,11a9.85,9.85,0,0,1-1.41,4.76c-.08.08-2-1-2.82,0a30.93,30.93,0,0,0-3.76,6.19c-.05.15-1.41,0-1.41,0s-3.05-2.58-4.7-2.38a2.19,2.19,0,0,0-1.88,1.91c0,.08,4.27-1.47,7,3.81,0,0,0,1,0,1S7,31,3.09,31C1,31,6.31,33.63,6.85,33.83S6,35.42,5.91,36.21s-3-.37-3.76.48a1.77,1.77,0,0,0,.47,2.38c.9.6,2.82,0,2.82,0s1,4.65-5.17,8.1C-.79,47.77,4,49.07,4,49.07s.39,6.55,1.41,7.62S2.1,60.39,2.62,61.46c.12.24,1.84.2,1.88,1.43.06,2-.09,5.41,1.41,6.19L4.5,70.51s1.21,1.91.94,3.33a6.53,6.53,0,0,1-1.88,2.86,24,24,0,0,1,3.29-1,8.17,8.17,0,0,1,2.35,0S9.74,81.54,13,84.8c1.17,1.19,4.66,8.42,6.58,10s7.83,7.7,9.87,8.58,8.5,4.92,8.93,5.72,10.69.44,11.75.48c.52,0,2.28,1.32,4.7,1.91A24.5,24.5,0,0,0,60.42,112Z"></path><path class="cls-2" d="M51.34,54.83V61h9.46V54.71m-22,15.48V54.41H73.33v15.3m0,11.26v3.17H38.79V80.69m17.27-34c-6.17-2.09-7.88-6-7.88-10.78a7.88,7.88,0,1,1,15.76,0c0,4.78-1.61,8.83-7.88,10.78ZM35,77.18l-5.28-4.64C27.94,70.94,27.2,67,28.49,65c2-3.07,9.76-16.65,11.62-17.2a24.87,24.87,0,0,1,6.35-.49h19.2a25.69,25.69,0,0,1,6.34.47c1.87.54,9.73,14.13,11.64,17.22,1.3,2.1.53,6-1.29,7.57l-5.17,4.37M36.93,70.87h2.93a2.81,2.81,0,0,1,2.8,2.8v3.57a2.81,2.81,0,0,1-2.8,2.8H36.93a1.6,1.6,0,0,1-1.6-1.6v-6A1.6,1.6,0,0,1,36.93,70.87Zm38.26,0H72.26a2.81,2.81,0,0,0-2.8,2.8v3.57a2.81,2.81,0,0,0,2.8,2.8h2.93a1.6,1.6,0,0,0,1.6-1.6v-6a1.6,1.6,0,0,0-1.6-1.6ZM48.75,34.94H69.37"></path></svg></path>
-                            </div>
-                            <div class="about-us-text">
-                                <h3>Hızlı Teslimat</h3>
-                                <p>Enfes lezzetlerimizi en hızlı şekilde size ulaştırıyoruz.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-12 about-us-image-container">
-                <div class="about-us-image">
-                    <img src="assets/images/about-us/6.jpg" alt="About Us">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Product -->
-<section class="product">
-    <div class="product-line">
-        <div class="product-pattern">
-            <img src="assets/images/Products/pattern-skeen.png" alt="Product ">
-            <img src="assets/images/Products/icon6.png" class="product-icon">
-        </div>
-    </div>
-    <div class="product-icons">
-        <div class="product-icon">
-            <img src="assets/images/icon/chili-shape.png" alt="Product">
-        </div>
-        <div class="product-icon">
-            <img src="assets/images/icon/crown-5.svg" alt="Product">
-        </div>
-        <div class="product-icon">
-            <img src="assets/images/icon/cup.svg" alt="Product">
-        </div>
-        <div class="product-icon">
-            <img src="assets/images/icon/fry-shape.png" alt="Product">
-        </div>
-        <div class="product-icon">
-            <img src="assets/images/icon/hotdog.svg" alt="Product">
-        </div>
-    </div>
-    <div class="container">
-        <div class="row align-items-center product-index">
-            <div class="col-lg-4 col-md-12 text-lg-center products-animation">
-                <div class="section-title">
-                    <h2 class="products-title">Ürünlerimiz</h2>
-                </div>
-            </div>
-            <div class=" col-md-8 col-12 products-tabs">
-                <div class="swiper productTabs">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a href="#" class="active" data-category="all">Tümü</a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#" data-category="doner">Döner</a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#" data-category="menu">Menü</a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#" data-category="porsiyon">Porsiyon Doner</a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#" data-category="icecekler">İçecekler</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
         <div class="row">
-            <div class="col-12">
-                <div class="swiper productCategory">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide" data-category="doner">
-                            <div class="product-item">
-                                <div class="product-image">
-                                    <img src="assets/images/Products/1.png" alt="Product">
-                                </div>
-                                <div class="product-content">
-                                    <h3>Tavuk Döner</h3>
-                                    <span>₺5.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide" data-category="doner">
-                            <div class="product-item">
-                                <div class="product-image">
-                                    <img src="assets/images/Products/2.png" alt="Product">
-                                </div>
-                                <div class="product-content">
-                                    <h3>Et Döner</h3>
-                                    <span>₺5.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide" data-category="menu">
-                            <div class="product-item">
-                                <div class="product-image">
-                                    <img src="assets/images/Products/3.png" alt="Product">
-                                </div>
-                                <div class="product-content">
-                                    <h3>Menü</h3>
-                                    <span>₺5.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide" data-category="porsiyon">
-                            <div class="product-item">
-                                <div class="product-image">
-                                    <img src="assets/images/Products/4.png" alt="Product">
-                                </div>
-                                <div class="product-content">
-                                    <h3>Tavuk Porsiyon</h3>
-                                    <span>₺5.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide" data-category="icecekler">
-                            <div class="product-item">
-                                <div class="product-image">
-                                    <img src="assets/images/Products/5.png" alt="Product">
-                                </div>
-                                <div class="product-content">
-                                    <h3>Pepsi</h3>
-                                    <span>₺5.00</span>
-                                </div>
-                            </div>
-                        </div>
+            <div class="col-md-6">
+                <div class="about-us-images">
+                    <div class="about-us-img-one">
+                        <img src="assets/images/about-us/1@2x.jpg" alt="About Us">
                     </div>
-                    <div class="swiper-pagination"></div>
+                    <div class="about-us-img-two">
+                        <img src="assets/images/about-us/2@2x.jpg" alt="About Us">
+                    </div>
                 </div>
+            </div>
+            <div class="col-md-6 about-mobil-margin">
+                <span class="about-us-subtitle">Hakkımızda</span>
+                <h2 class="about-us-title">Mix Chicken Hakkında</h2>
+                <p class="about-us-description">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+                <a href="kurumsal.html" class="about-us-button">Detaylar</a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- promo-deal -->
-<section class="promo-deal" style="background-image: url(assets/images/promo-deal/main-bg.jpg)">
-    <div class="promo-deal-icons">
-        <div class="promo-deal-icon">
-            <img src="assets/images/promo-deal/patato-shape.png" alt="Promo Deal">
-        </div>
-        <div class="promo-deal-icon">
-            <img src="assets/images/promo-deal/tomato-shape-2.png" alt="Promo Deal">
-        </div>
-    </div>
+<!-- Yakinda Açılacak Şubeler -->
+<section class="coming-soon" style="background-image: url(assets/images/subeler/bg.jpg)">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6 col-12">
-                <div class="promo-deal-content">
-                    <h2 class="promo-deal-animation">Bu Haftanın <p class="mix-chicken-title">Mix Chicken</p> Fırsatları</h2>
-                    <p class="promo-deal-desc">En sevdiğiniz yemeklerde harika indirimler ve özel teklifler için bizi takip edin.</p>
-                    <a href="#" class="promo-deal-btn">Fırsatları Gör</a>
+        <div class="row">
+            <div class="col-12 text-center mb-4">
+                <span class="coming-soon-subtitle">Şubelerimiz</span>
+                <h2 class="coming-soon-title">Yakında Açılacak Şubeler</h2>
+            </div>
+        </div>
+        <div class="swiper subeler">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="" class="subeler-card">
+                        <div class="subeler-img">
+                            <img src="assets/images/subeler/1.jpg" alt="Şube 1">
+                        </div>
+                        <div class="subeler-card-content">
+                            <h3 class="subeler-card-title">Şube 1</h3>
+                            <p class="subeler-card-adres">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                            <button class="cta">
+                                <span>Detaylar</span>
+                                <svg width="15px" height="10px" viewBox="0 0 13 10">
+                                    <path d="M1,5 L11,5"></path>
+                                    <polyline points="8 1 12 5 8 9"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="" class="subeler-card">
+                        <div class="subeler-img">
+                            <img src="assets/images/subeler/1.jpg" alt="Şube 1">
+                        </div>
+                        <div class="subeler-card-content">
+                            <h3 class="subeler-card-title">Şube 1</h3>
+                            <p class="subeler-card-adres">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                            <button class="cta">
+                                <span>Detaylar</span>
+                                <svg width="15px" height="10px" viewBox="0 0 13 10">
+                                    <path d="M1,5 L11,5"></path>
+                                    <polyline points="8 1 12 5 8 9"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="" class="subeler-card">
+                        <div class="subeler-img">
+                            <img src="assets/images/subeler/1.jpg" alt="Şube 1">
+                        </div>
+                        <div class="subeler-card-content">
+                            <h3 class="subeler-card-title">Şube 1</h3>
+                            <p class="subeler-card-adres">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                            <button class="cta">
+                                <span>Detaylar</span>
+                                <svg width="15px" height="10px" viewBox="0 0 13 10">
+                                    <path d="M1,5 L11,5"></path>
+                                    <polyline points="8 1 12 5 8 9"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="" class="subeler-card">
+                        <div class="subeler-img">
+                            <img src="assets/images/subeler/1.jpg" alt="Şube 1">
+                        </div>
+                        <div class="subeler-card-content">
+                            <h3 class="subeler-card-title">Şube 1</h3>
+                            <p class="subeler-card-adres">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                            <button class="cta">
+                                <span>Detaylar</span>
+                                <svg width="15px" height="10px" viewBox="0 0 13 10">
+                                    <path d="M1,5 L11,5"></path>
+                                    <polyline points="8 1 12 5 8 9"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="col-md-6 col-12" style="z-index: 9">
-                <div class="promo-deal-image">
-                    <img src="assets/images/promo-deal/doner.png" alt="Promo Deal">
-                </div>
-            </div>
+            <div class="swiper-pagination"></div>
+
         </div>
     </div>
 </section>
@@ -426,68 +243,97 @@
         <div class="row align-items-center">
             <div class="col-12">
                 <div class="news-title" >
-                    <h2 class="news-title-animation">Blog</h2>
+                    <h2 class="news-title-animation">Haberler</h2>
                 </div>
             </div>
             <div class="col-12">
                 <div class="swiper newsSlider">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="news-item">
+                            <a href="" class="news-item">
                                 <div class="news-image">
                                     <img src="assets/images/news/news1.png" alt="News">
                                 </div>
                                 <div class="news-content">
                                     <h3 class="news-title">Yeni Lezzetler</h3>
                                     <p class="news-desc">Yeni lezzetlerimiz ile tanışın. Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın. Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın. Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın</p>
-                                    <a href="#" class="news-btn">Devamını Oku</a>
+                                    <button class="cta">
+                                        <span>Devamını Oku</span>
+                                        <svg width="15px" height="10px" viewBox="0 0 13 10">
+                                            <path d="M1,5 L11,5"></path>
+                                            <polyline points="8 1 12 5 8 9"></polyline>
+                                        </svg>
+                                    </button>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <div class="news-item">
+                            <a href="" class="news-item">
                                 <div class="news-image">
                                     <img src="assets/images/news/news1.png" alt="News">
                                 </div>
                                 <div class="news-content">
                                     <h3 class="news-title">Yeni Lezzetler</h3>
                                     <p class="news-desc">Yeni lezzetlerimiz ile tanışın. Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın. Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın. Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın</p>
-                                    <a href="#" class="news-btn">Devamını Oku</a>
+                                    <button class="cta">
+                                        <span>Devamını Oku</span>
+                                        <svg width="15px" height="10px" viewBox="0 0 13 10">
+                                            <path d="M1,5 L11,5"></path>
+                                            <polyline points="8 1 12 5 8 9"></polyline>
+                                        </svg>
+                                    </button>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <div class="news-item">
+                            <a href="" class="news-item">
                                 <div class="news-image">
                                     <img src="assets/images/news/news1.png" alt="News">
                                 </div>
                                 <div class="news-content">
                                     <h3 class="news-title">Yeni Lezzetler</h3>
                                     <p class="news-desc">Yeni lezzetlerimiz ile tanışın. Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın. Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın. Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın</p>
-                                    <a href="#" class="news-btn">Devamını Oku</a>
+                                    <button class="cta">
+                                        <span>Devamını Oku</span>
+                                        <svg width="15px" height="10px" viewBox="0 0 13 10">
+                                            <path d="M1,5 L11,5"></path>
+                                            <polyline points="8 1 12 5 8 9"></polyline>
+                                        </svg>
+                                    </button>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <div class="news-item">
+                            <a href="" class="news-item">
                                 <div class="news-image">
                                     <img src="assets/images/news/news1.png" alt="News">
                                 </div>
                                 <div class="news-content">
                                     <h3 class="news-title">Yeni Lezzetler</h3>
                                     <p class="news-desc">Yeni lezzetlerimiz ile tanışın. Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın. Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın. Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın Yeni lezzetlerimiz ile tanışın</p>
-                                    <a href="#" class="news-btn">Devamını Oku</a>
+                                    <button class="cta">
+                                        <span>Devamını Oku</span>
+                                        <svg width="15px" height="10px" viewBox="0 0 13 10">
+                                            <path d="M1,5 L11,5"></path>
+                                            <polyline points="8 1 12 5 8 9"></polyline>
+                                        </svg>
+                                    </button>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
+                    <div class="swiper-pagination"></div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- En Yakın Şubeler İframe-->
+<section class="iframe">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.0000000000005!2d28.978000000000002!3d41.012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caba1b1b1b1b1b%3A0x1b1b1b1b1b1b1b1b!2sMix%20Chicken!5e0!3m2!1str!2str!4v1634563660001!5m2!1str!2str" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+
 
 <!-- Footer -->
 <footer class="footer">
@@ -540,37 +386,126 @@
                 <a href="" class="col-6 d-flex align-items-end justify-content-end p-0">
                     <img src="assets/images/miova.png" alt="Miova" class="f-logo">
                 </a>
+            </div>
         </div>
-    </div>
     </div>
 </footer>
 
-<!-- Search Content -->
-<section id="search-content" class="search-content">
-    <div class="container">
-        <div class="search-content-wrapper">
-            <div class="search-content-header">
-                <div id="closeBtn" class="search-content-close">
-                    <i class="fas fa-times"></i>
-                </div>
-            </div>
-            <div class="search-content-body">
-                <h2 class="search-content-title">Ürün Ara</h2>
-                <form action="#" method="post">
-                    <input type="text" name="search" placeholder="Ara...">
-                    <button type="submit"><i class="fas fa-search"></i></button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/main.js"></script>
 <script src="assets/js/gsap.js"></script>
-<<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+<script>
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navigation = document.getElementById('navigation');
+    hamburgerBtn.addEventListener('click', () => {
+        navigation.classList.toggle('active');
+    });
+
+    var swiper = new Swiper(".newsSlider", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+        },
+    });
+
+    var swiper = new Swiper(".subeler", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+        },
+    });
+    var swiper = new Swiper('.homeSlider', {
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        on: {
+            init: function () {
+                var activeSlide = document.querySelector('.swiper-slide-active');
+                gsap.set(activeSlide.querySelectorAll('.swiper-title, .swiper-description, .swiper-button'), {
+                    opacity: 0,
+                    y: 20
+                });
+                gsap.to(activeSlide.querySelectorAll('.swiper-title, .swiper-description, .swiper-button'), {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.5,
+                    stagger: 0.3,
+                    delay: 0.3
+                });
+            },
+            slideChangeTransitionStart: function () {
+                var previousSlide = document.querySelector('.swiper-slide-active');
+                if (previousSlide) {
+                    gsap.to(previousSlide.querySelectorAll('.swiper-title, .swiper-description, .swiper-button'), {
+                        opacity: 0,
+                        y: 20,
+                        duration: 0.5,
+                        stagger: 0.1
+                    });
+                }
+            },
+            slideChangeTransitionEnd: function () {
+                var activeSlide = document.querySelector('.swiper-slide-active');
+                if (activeSlide) {
+                    gsap.fromTo(activeSlide.querySelectorAll('.swiper-title, .swiper-description, .swiper-button'), {
+                        opacity: 0,
+                        y: 20
+                    }, {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.5,
+                        stagger: 0.3,
+                        delay: 0.3
+                    });
+                }
+            }
+        }
+    });
+
+    // Initialize the swiper to trigger the init event
+    swiper.init();
+
+
+</script>
 </body>
 </html>
