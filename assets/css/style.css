@@ -1208,3 +1208,76 @@ header:after{
     justify-content: center;
     padding-block: 0.5rem;
 }
+/*subeler-items*/
+.subeler{
+    padding: 50px 0;
+    position: relative;
+}
+.subeler-items{
+    position:relative;
+    color: #000000;
+    margin-bottom: 50px;
+}
+
+.subeler-title h2{
+    font-size: 40px;
+    font-weight: 700;
+    color: #2e2d2c;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.subeler-img{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.subeler-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+}
+.subeler-content{
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #c2c2c2;
+    margin-top: -50px;
+    margin-inline: auto;
+    width: calc(100% - 40px);
+}
+.subeler-items:hover .subeler-img img{
+    transform: scale(1.1);
+}
+.subeler-items:hover .subeler-content{
+    margin-top: -100px;
+}
+.subeler-items .subeler-content h3{
+    font-size: 26px;
+    font-weight: 700;
+    color: #000000;
+}
+.subeler-items:hover .subeler-content h3{
+    color: var(--restaurant-hover);
+}
+.subeler-detail{
+    padding: 50px 0;
+    position: relative;
+}
+.subeler-detail-title{
+    font-size: 42px;
+    font-weight: 700;
+    color: #2e2d2c;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.subeler-contact-title{
+    font-size: 32px;
+    font-weight: 700;
+    color: #2e2d2c;
+    margin-bottom: 50px;
+    text-align: center;
+}
